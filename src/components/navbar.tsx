@@ -22,11 +22,10 @@ export function Navbar() {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <Wind className="h-8 w-8 text-primary" />
-                        <span className="text-xl font-bold">
+                        <span className="text-2xl font-bold tracking-tight">
                             <span className="text-white">Air</span>
-                            <span className="text-green-500">Flow</span>
-                            <span className="text-white"> Station</span>
+                            <span className="text-teal-400">Flow</span>
+                            <span className="text-white">Station</span>
                         </span>
                     </Link>
 
