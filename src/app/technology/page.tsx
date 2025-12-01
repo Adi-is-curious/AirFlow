@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Wind, Zap, ShieldCheck } from "lucide-react";
+import { Wind, Zap, ShieldCheck, Cpu, Activity, Layers } from "lucide-react";
 
 export default function TechnologyPage() {
     return (
@@ -43,30 +43,44 @@ export default function TechnologyPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold">Venturi-Stator Aerodynamics</h2>
                             </div>
-                            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                                The outer shell is shaped like two facing &quot;C&quot;s (⊃ ⊂). This patented geometry acts as a nozzle,
-                                squeezing the incoming traffic wind.
-                            </p>
-                            <ul className="space-y-4 text-muted-foreground">
-                                <li className="flex items-start">
-                                    <span className="mr-2 text-primary">•</span>
-                                    <span><strong>Acceleration:</strong> Boosts 4 m/s breeze to 6 m/s wind.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-2 text-primary">•</span>
-                                    <span><strong>Omnidirectional:</strong> Captures wake from both sides of the highway.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-2 text-primary">•</span>
-                                    <span><strong>Power Gain:</strong> 3.4x more energy than open rotors.</span>
-                                </li>
-                            </ul>
+
+                            <div className="mb-8">
+                                <h3 className="text-xl font-semibold text-white mb-2 flex items-center">
+                                    <Activity className="h-5 w-5 mr-2 text-primary" />
+                                    Technical Brief
+                                </h3>
+                                <p className="text-lg text-muted-foreground leading-relaxed">
+                                    The outer shell is shaped like two facing &quot;C&quot;s (⊃ ⊂). This patented geometry acts as a nozzle,
+                                    squeezing the incoming traffic wind to accelerate airflow before it hits the rotor.
+                                </p>
+                            </div>
+
+                            <div className="bg-accent/5 p-6 rounded-xl border border-white/10">
+                                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                                    <Cpu className="h-5 w-5 mr-2 text-primary" />
+                                    Engineering Detail
+                                </h3>
+                                <ul className="space-y-4 text-muted-foreground">
+                                    <li className="flex items-start">
+                                        <span className="mr-2 text-primary">•</span>
+                                        <span><strong>Bernoulli&apos;s Principle:</strong> By reducing the cross-sectional area, we drop pressure and increase velocity from 4 m/s (breeze) to 6 m/s (power wind).</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <span className="mr-2 text-primary">•</span>
+                                        <span><strong>Omnidirectional Capture:</strong> The symmetric design captures turbulent wake from vehicles passing on <em>both</em> sides of the highway divider.</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <span className="mr-2 text-primary">•</span>
+                                        <span><strong>Power Gain:</strong> Since power is proportional to the cube of velocity (V³), a 50% speed boost results in <strong>3.4x more energy</strong> than open rotors.</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="relative h-[400px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+                            className="relative h-[500px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
                         >
                             <Image
                                 src="/assets/detailed-diagram.jpg"
@@ -95,26 +109,44 @@ export default function TechnologyPage() {
                                 </div>
                                 <h2 className="text-3xl font-bold">Fibonacci-Helix Rotor</h2>
                             </div>
-                            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                                Inside is a twisted, spiral blade inspired by DNA strands. This design ensures smooth spinning
-                                without &quot;dead spots&quot; and reduces drag.
-                            </p>
-                            <ul className="space-y-4 text-muted-foreground">
-                                <li className="flex items-start">
-                                    <span className="mr-2 text-secondary">•</span>
-                                    <span><strong>Material:</strong> XLPE (Water Tank Plastic) - Won&apos;t crack in 45°C heat.</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-2 text-secondary">•</span>
-                                    <span><strong>Efficiency:</strong> 15-20% drag reduction vs standard blades.</span>
-                                </li>
-                            </ul>
+
+                            <div className="mb-8">
+                                <h3 className="text-xl font-semibold text-white mb-2 flex items-center">
+                                    <Activity className="h-5 w-5 mr-2 text-secondary" />
+                                    Technical Brief
+                                </h3>
+                                <p className="text-lg text-muted-foreground leading-relaxed">
+                                    Inside is a twisted, spiral blade inspired by DNA strands and the Golden Ratio.
+                                    This design ensures smooth spinning without &quot;dead spots&quot; and significantly reduces drag.
+                                </p>
+                            </div>
+
+                            <div className="bg-accent/5 p-6 rounded-xl border border-white/10">
+                                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                                    <Cpu className="h-5 w-5 mr-2 text-secondary" />
+                                    Engineering Detail
+                                </h3>
+                                <ul className="space-y-4 text-muted-foreground">
+                                    <li className="flex items-start">
+                                        <span className="mr-2 text-secondary">•</span>
+                                        <span><strong>Material Science:</strong> Constructed from XLPE (Cross-linked Polyethylene) - the same durable plastic used in water tanks. It is UV-stabilized and won&apos;t crack even in 45°C highway heat.</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <span className="mr-2 text-secondary">•</span>
+                                        <span><strong>Aerodynamics:</strong> The helical twist allows the blade to &quot;slice&quot; through air rather than slapping it, reducing noise and vibration.</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <span className="mr-2 text-secondary">•</span>
+                                        <span><strong>Efficiency:</strong> Achieves a 15-20% reduction in drag coefficient (Cd) compared to standard Savonius blades.</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="relative h-[400px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl lg:order-1"
+                            className="relative h-[500px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl lg:order-1"
                         >
                             <Image
                                 src="/assets/cross-section-airflow.jpg"
@@ -133,7 +165,7 @@ export default function TechnologyPage() {
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold mb-4">3-Stage Filtration</h2>
                         <p className="text-muted-foreground max-w-2xl mx-auto">
-                            Designed for sticky, oily highway dust.
+                            Designed specifically for the sticky, oily, and heavy dust found on Indian highways.
                         </p>
                     </div>
 
@@ -141,19 +173,22 @@ export default function TechnologyPage() {
                         {[
                             {
                                 title: "1. Mesh Pre-Filter",
-                                desc: "Catches leaves, large debris, and oily diesel soot.",
-                                icon: ShieldCheck,
+                                brief: "The First Line of Defense",
+                                detail: "A coarse, washable stainless steel mesh that physically blocks large debris like dry leaves, plastic wrappers, and large fly ash particles. It also traps sticky diesel soot.",
+                                icon: Layers,
                                 color: "text-blue-400"
                             },
                             {
                                 title: "2. Cyclone Trap",
-                                desc: "Spins air to separate heavy sand and tire rubber into a hopper.",
+                                brief: "Inertial Separation",
+                                detail: "Uses centrifugal force to spin the air. Heavier particles like silica sand and tire rubber dust are flung outward and fall into a collection hopper, preventing them from clogging the fine filter.",
                                 icon: Wind,
                                 color: "text-purple-400"
                             },
                             {
                                 title: "3. HEPA Core",
-                                desc: "Captures dangerous PM2.5. Auto-vibration cleans it when clogged.",
+                                brief: "Microscopic Purification",
+                                detail: "A medical-grade H13 HEPA filter that captures 99.97% of PM2.5 particles (down to 0.3 microns). Features an auto-vibration mechanism to shake off dust and extend filter life.",
                                 icon: ShieldCheck,
                                 color: "text-green-400"
                             }
@@ -164,11 +199,12 @@ export default function TechnologyPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="p-8 rounded-2xl bg-accent/5 border border-white/10 hover:border-primary/30 transition-all"
+                                className="p-8 rounded-2xl bg-accent/5 border border-white/10 hover:border-primary/30 transition-all flex flex-col"
                             >
-                                <item.icon className={`h-10 w-10 ${item.color} mb-6`} />
-                                <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                                <p className="text-muted-foreground">{item.desc}</p>
+                                <item.icon className={`h-12 w-12 ${item.color} mb-6`} />
+                                <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                                <p className="text-primary font-medium mb-4">{item.brief}</p>
+                                <p className="text-muted-foreground leading-relaxed text-sm">{item.detail}</p>
                             </motion.div>
                         ))}
                     </div>
