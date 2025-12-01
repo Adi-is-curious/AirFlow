@@ -23,8 +23,10 @@ export function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
                         <Wind className="h-8 w-8 text-primary" />
-                        <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                            AirFlow Station
+                        <span className="text-xl font-bold">
+                            <span className="text-white">Air</span>
+                            <span className="text-green-500">Flow</span>
+                            <span className="text-white"> Station</span>
                         </span>
                     </Link>
 
