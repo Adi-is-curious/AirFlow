@@ -3,13 +3,46 @@
 import { Hero } from "@/components/hero";
 import { FeatureGrid } from "@/components/feature-grid";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { AlertTriangle, CheckCircle, Globe, Lightbulb, TrendingUp, Users } from "lucide-react";
+import { AlertTriangle, CheckCircle, Globe, Lightbulb, TrendingUp, Users, Activity, LayoutDashboard } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
+
+      {/* NEW: Live Demo CTAs */}
+      <section className="py-8 bg-background border-b border-white/5">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="p-6 rounded-2xl border border-blue-500/30 bg-blue-500/5 shadow-2xl relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+              <div className="text-left">
+                <h3 className="text-lg font-bold text-foreground mb-1 flex items-center gap-2">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                  </span>
+                  Live Simulation Active
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Calculated ROI: <span className="text-emerald-500 font-bold">18 Mo</span> •
+                  Lives Protected: <span className="text-blue-500 font-bold">2,400+</span>
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <Link href="/calculator" className="px-5 py-2.5 bg-background border border-border rounded-lg text-sm font-semibold hover:border-primary transition-colors flex items-center gap-2">
+                  <Activity size={16} className="text-primary" /> ROI Calculator
+                </Link>
+                <Link href="/dashboard" className="px-5 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-shadow flex items-center gap-2">
+                  <LayoutDashboard size={16} /> Live Dashboard
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Problem/Solution Section */}
       <section className="py-24 bg-accent/50">
