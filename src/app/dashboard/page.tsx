@@ -63,7 +63,7 @@ export default function DashboardPage() {
     }, [operatingMode, updateMetrics]);
 
     // AI Insight Generator
-    const handleGenerateInsight = async () => {
+    const handleGenerateInsight = React.useCallback(async () => {
         setIsGenerating(true);
         const insight = await generateAIInsight({
             windSpeed,
@@ -73,14 +73,14 @@ export default function DashboardPage() {
         });
         setAiInsight(insight);
         setIsGenerating(false);
-    };
+    }, [windSpeed, pmLevel, batterySoc, operatingMode]);
 
     // Initial Insight
     useEffect(() => {
         handleGenerateInsight();
         const aiTimer = setInterval(handleGenerateInsight, 30000); // New insight every 30s
         return () => clearInterval(aiTimer);
-    }, []);
+    }, [handleGenerateInsight]);
 
     return (
         <DashboardLayout>

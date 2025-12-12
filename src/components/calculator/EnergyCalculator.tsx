@@ -54,10 +54,13 @@ export default function EnergyCalculator() {
         // Assumption: Traffic adds ~1-2 m/s equivalent effective draft if close
         const trafficFactor = Math.min(trafficVolume / 10000, 1.0); // Boost factor
 
+        // Boost wind power by up to 20% based on traffic wake
+        const boostedWindPower = windPowerWatts * (1 + (trafficFactor * 0.2));
+
         // Solar (Avg 5 effective hours)
         const solarDailyWh = 160 * 5;
 
-        const turbineDailyWh = windPowerWatts * operatingHours;
+        const turbineDailyWh = boostedWindPower * operatingHours;
 
         // Total Generation per station
         let singleStationDailyWh = turbineDailyWh + solarDailyWh;
