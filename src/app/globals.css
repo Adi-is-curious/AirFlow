@@ -14,27 +14,34 @@
 }
 
 :root {
-  /* Default to Dark Mode colors for that premium feel */
-  --background: #0f172a;
-  /* Slate 900 */
-  --foreground: #f8fafc;
-  /* Slate 50 */
+  /* V2.0 Light Theme - Soft Educational */
+  --background: #FFFFFF;
+  --foreground: #5F6F7A; /* Body Grey */
 
-  --primary: #0ea5e9;
-  /* Sky 500 */
-  --primary-foreground: #0f172a;
+  --primary: #4FA3C8; /* Primary Blue */
+  --primary-foreground: #FFFFFF;
 
-  --secondary: #eab308;
-  /* Yellow 500 */
+  --secondary: #F2C94C; /* Yellow */
   --secondary-foreground: #0f172a;
 
-  --accent: #1e293b;
-  /* Slate 800 */
-  --accent-foreground: #f8fafc;
+  --accent: #2F6F8F; /* Section Headings Blue */
+  --accent-foreground: #FFFFFF;
+
+  --muted: #F4FAFD; /* Card Background */
+  --muted-foreground: #5F6F7A;
+  
+  --border: #9FD3E6; /* Card Border */
+  
+  --heading: #4A5B6A; /* Dark Blue-Grey for Headings */
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(to bottom, #EAF6FB, #FFFFFF);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
 }

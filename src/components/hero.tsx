@@ -15,24 +15,22 @@ export function Hero() {
                     src="/assets/render-on-road.jpg"
                     alt="AirFlow Station on Highway"
                     fill
-                    className="object-cover"
+                    className="object-cover opacity-80"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90" />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/60 to-white/95" />
             </div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-                        <span className="block text-foreground">Breathing Life into</span>
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                            Indian Highways
-                        </span>
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-heading">
+                        Physics-Compliant
+                        <span className="block text-primary">Air Purification - V2.0</span>
                     </h1>
                 </motion.div>
 
@@ -40,10 +38,9 @@ export function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="mt-4 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10"
+                    className="mt-4 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10 font-medium"
                 >
-                    The world&apos;s first self-powered, bi-directional traffic wake harvester
-                    that turns pollution into clean energy and fresh air.
+                    From Thermodynamic Impossibility to Deployable Reality
                 </motion.p>
 
                 <motion.div
