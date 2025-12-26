@@ -46,15 +46,15 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li className="flex items-center space-x-2">
                                 <Mail className="h-4 w-4" />
-                                <span>contact@airflowstation.com</span>
+                                <span>aditya.aloe29@gmail.com</span>
                             </li>
                             <li className="flex items-center space-x-2">
                                 <Phone className="h-4 w-4" />
-                                <span>+91 98765 43210</span>
+                                <span>9801781159</span>
                             </li>
                             <li className="flex items-center space-x-2">
                                 <MapPin className="h-4 w-4" />
-                                <span>New Delhi, India</span>
+                                <span>Near Viva city mall, Jaipur 303905</span>
                             </li>
                         </ul>
                     </div>

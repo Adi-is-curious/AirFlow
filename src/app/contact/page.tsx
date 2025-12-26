@@ -72,8 +72,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-lg">Email</h3>
-                                        <p className="text-muted-foreground">contact@airflowstation.com</p>
-                                        <p className="text-muted-foreground">partnerships@airflowstation.com</p>
+                                        <p className="text-muted-foreground">aditya.aloe29@gmail.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-4">
@@ -82,8 +81,7 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-lg">Phone</h3>
-                                        <p className="text-muted-foreground">+91 98765 43210</p>
-                                        <p className="text-muted-foreground">Mon-Fri, 9am - 6pm IST</p>
+                                        <p className="text-muted-foreground">9801781159</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-4">
@@ -93,9 +91,8 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="font-semibold text-lg">Headquarters</h3>
                                         <p className="text-muted-foreground">
-                                            123 Innovation Drive,<br />
-                                            Tech Park, New Delhi,<br />
-                                            India - 110001
+                                            Near Viva city mall,<br />
+                                            Jaipur 303905
                                         </p>
                                     </div>
                                 </div>
