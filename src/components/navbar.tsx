@@ -17,8 +17,12 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="fixed top-0 left-0 right-0 z-50 flex flex-col">
+            <div className="bg-amber-500/10 text-amber-500 text-xs sm:text-sm px-4 py-2 text-center border-b border-amber-500/20 backdrop-blur-md">
+                <span className="font-semibold">Notice:</span> We are currently at the prototyping phase and hence any data regarding working of the prototype is based on our calculation and is not actual data.
+            </div>
+            <nav className="bg-background/80 backdrop-blur-md border-b border-border w-full">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
@@ -80,6 +84,7 @@ export function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+            </nav>
+        </header>
     );
 }
